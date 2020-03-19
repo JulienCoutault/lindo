@@ -114,11 +114,10 @@
       "node_modules/**/*",
       "locale/**/*",
       "package.json",
-      "CHANGELOG.md",
-      "build/icon.ico"
+      "CHANGELOG.md"
     ],
     "extraFiles": [
-        "build/icon.ico"
+      "build/icon.png"
     ],
     "mac": {
       "target": [
@@ -133,15 +132,17 @@
         "tar.gz",
         "deb"
       ],
-      "mimeTypes": ["application/x-binary"],
+      "mimeTypes": [
+        "application/x-executable"
+      ],
       "category": "Game",
-      "icon": "build/icon.png",
+      "icon": "build/icon.svg",
       "maintainer": "Prixe"
     },
-    "deb":{
-        "description": "Lindo deb for Linux",
-        "artifactName": "lindo",
-        "icon": "build/icon.png"
+    "deb": {
+      "description": "Lindo Client for Linux",
+      "icon": "build/icon.svg",
+      "desktop": "build/lindo.desktop"
     },
     "win": {
       "target": [
