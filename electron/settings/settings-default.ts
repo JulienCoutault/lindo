@@ -46,6 +46,7 @@ export const SettingsDefault: SettingsInterface = {
             diver: {
                 end_turn: "backspace",
                 open_chat: "return",
+                alignment_scan: "",
                 active_open_menu: true,
                 open_menu: "",
                 go_up: "ctrl+up",
@@ -131,7 +132,7 @@ export const SettingsDefault: SettingsInterface = {
                 alliance: "",
                 mount: "n",
                 directory: "",
-                alignement: "",
+                alignment: "",
                 bestiary: "b",
                 title: "t",
                 achievement: "u",

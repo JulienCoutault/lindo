@@ -12,6 +12,7 @@ import { Logger } from 'app/core/electron/logger.helper';
 import { BugReportService } from 'app/core/service/bug-report.service';
 import { HttpClient } from '@angular/common/http';
 
+import { Alignment } from "app/core/mods/alignment/alignment";
 import { AutoGroup } from "app/core/mods/auto-group/autogroup";
 import { CssOverload } from "app/core/mods/cssOverload/cssOverload";
 import { DamageEstimator } from "app/core/mods/damage-estimator/damageestimator";
@@ -61,7 +62,7 @@ export class GameComponent implements AfterViewInit {
     private hideMount: HideMount;
 	private partyInfo:PartyInfo;
     private mover: Mover;
-
+    private alignment: Alignment;
     constructor(
         private windowService: WindowService,
         private ipcRendererService: IpcRendererService,
