@@ -3,7 +3,7 @@ import { forEachOf } from 'async';
 import { ShortcutsHelper } from "app/core/helpers/shortcuts.helper";
 import { Logger } from "app/core/electron/logger.helper";
 
-import { Mod } from "../mod";
+import { Alignment, Mod } from "../mod";
 import { Mover } from "./mover";
 
 export class Shortcuts extends Mod {
@@ -17,6 +17,8 @@ export class Shortcuts extends Mod {
         if (this.params.diver.active_open_menu) {
             Logger.info('- enable Open_menu');
         }
+
+        this.alignment = new Alignment(this.wGame, this.settings, this.translate);
         this.mover = new Mover(this.wGame, this.settings, this.translate);
         this.bindAll();
     }
