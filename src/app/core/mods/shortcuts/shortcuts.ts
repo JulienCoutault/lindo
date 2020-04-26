@@ -2,11 +2,6 @@ import { NgZone } from '@angular/core';
 import { forEachOf } from 'async';
 import { ShortcutsHelper } from "app/core/helpers/shortcuts.helper";
 import { Logger } from "app/core/electron/logger.helper";
-<<<<<<< HEAD
-import { Mover } from "app/core/mods/mover/mover";
-import { Alignment } from '../alignment/alignment';
-=======
->>>>>>> master
 
 import { Mod } from "../mod";
 import { Mover } from "./mover";
@@ -14,27 +9,15 @@ import { Mover } from "./mover";
 export class Shortcuts extends Mod {
     private shortcutsHelper: ShortcutsHelper;
     private mover: Mover;
-<<<<<<< HEAD
-    private alignment : Alignment
-    constructor(wGame: any, params: Option.Shortcuts) {
-        super(wGame);
-        this.params = params;
-=======
 
     startMod(): void {
         this.params = this.settings.option.shortcuts;
->>>>>>> master
         this.shortcutsHelper = new ShortcutsHelper(this.wGame);
 
         if (this.params.diver.active_open_menu) {
             Logger.info('- enable Open_menu');
         }
-<<<<<<< HEAD
-        this.mover = new Mover(this.wGame);
-        this.alignment = new Alignment(this.wGame);
-=======
         this.mover = new Mover(this.wGame, this.settings, this.translate);
->>>>>>> master
         this.bindAll();
     }
 

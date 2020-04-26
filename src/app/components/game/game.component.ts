@@ -12,28 +12,8 @@ import { Logger } from 'app/core/electron/logger.helper';
 import { BugReportService } from 'app/core/service/bug-report.service';
 import { HttpClient } from '@angular/common/http';
 
-<<<<<<< HEAD
-import { Alignment } from "app/core/mods/alignment/alignment";
-import { AutoGroup } from "app/core/mods/auto-group/autogroup";
-import { CssOverload } from "app/core/mods/cssOverload/cssOverload";
-import { DamageEstimator } from "app/core/mods/damage-estimator/damageestimator";
-import { FightChronometer } from "app/core/mods/fightchronometer/fightchronometer";
-import { HealthBar } from "app/core/mods/health-bar/healthbar";
-import { HideMount } from "app/core/mods/hide-mount/hide-mount";
-import { HideShop } from "app/core/mods/hide-shop/hide-shop";
-import { Inactivity } from "app/core/mods/general/inactivity";
-import { Jobsxp } from "app/core/mods/jobsxp/jobsxp";
-import { JsFixes } from "app/core/mods/jsFixes/jsFixes";
-import { KeyboardInput } from "app/core/mods/keyboard-input/keyboard-input";
-import { Mover } from "app/core/mods/mover/mover";
-import { Notifications } from "app/core/mods/notifications/notifications";
-import { PartyInfo } from "app/core/mods/party-info/party-info";
-import { RapidExchange } from "app/core/mods/rapid-exchange/rapid-exchange";
-import { Shortcuts } from "app/core/mods/shortcuts/shortcuts";
-=======
 import * as Mods from "app/core/mods";
 import { Mod } from "app/core/mods/mod";
->>>>>>> master
 
 @Component({
     selector: 'component-game',
@@ -48,30 +28,8 @@ export class GameComponent implements AfterViewInit {
     private gameLoaded: boolean = false;
     private backupMaxZoom: number;
 
-<<<<<<< HEAD
-    // Mods
-    private autogroup: AutoGroup;
-    private inactivity: Inactivity;
-    private healthbar: HealthBar;
-    private jobsxp: Jobsxp;
-    private fightchronometer: FightChronometer;
-    private damageEstimator: DamageEstimator;
-    private notifications: Notifications;
-    private cssOverload: CssOverload;
-    private jsFixes: JsFixes;
-    private rapidExchange: RapidExchange;
-    private wizAssets: WizAssetsContainer;
-    private plugins: PluginsContainer;
-    private hideShop: HideShop;
-    private keyboardInput: KeyboardInput;
-    private hideMount: HideMount;
-	private partyInfo:PartyInfo;
-    private mover: Mover;
-    private alignment: Alignment;
-=======
     private mods: Mod[] = [];
 
->>>>>>> master
     constructor(
         private windowService: WindowService,
         private ipcRendererService: IpcRendererService,
