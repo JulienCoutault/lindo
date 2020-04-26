@@ -6,8 +6,7 @@ import { Logger } from "app/core/electron/logger.helper";
 
 @Component({
     selector: 'component-toolbar',
-    templateUrl: './toolbar.component.html',
-    styleUrls: ['./toolbar.component.scss']
+    templateUrl: './toolbar.component.html'
 })
 export class ToolbarComponent implements OnInit {
 
@@ -22,6 +21,7 @@ export class ToolbarComponent implements OnInit {
         private applicationService: ApplicationService
     ) {
         this.appName = applicationService.appName;
+        this.isAudioMuted = this.soundService.isAudioMuted();
     }
 
     ngOnInit() {
