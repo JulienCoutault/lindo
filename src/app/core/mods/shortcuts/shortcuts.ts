@@ -4,14 +4,10 @@ import { ShortcutsHelper } from "app/core/helpers/shortcuts.helper";
 import { Logger } from "app/core/electron/logger.helper";
 
 import { Mod } from "../mod";
-
-import { Alignment } from "../alignment/alignment";
 import { Mover } from "./mover";
 
 export class Shortcuts extends Mod {
     private shortcutsHelper: ShortcutsHelper;
-
-    private alignment: Alignment;
     private mover: Mover;
 
     startMod(): void {
@@ -21,8 +17,6 @@ export class Shortcuts extends Mod {
         if (this.params.diver.active_open_menu) {
             Logger.info('- enable Open_menu');
         }
-
-        this.alignment = new Alignment(this.wGame, this.settings, this.translate);
         this.mover = new Mover(this.wGame, this.settings, this.translate);
         this.bindAll();
     }
@@ -82,13 +76,6 @@ export class Shortcuts extends Mod {
             }
         });
 
-        // Scan alignment
-        this.shortcutsHelper.bind(this.params.diver.alignment_scan, (e:any) => {
-            this.alignment.scan();
-        });
-        this.shortcutsHelper.bindVanillaKeyUp(this.params.diver.alignment_scan, (e:any) => {
-            this.alignment.destroy();
-        });
         // Open menu
         this.shortcutsHelper.bind(this.params.diver.open_menu, () => {
             this.wGame.gui.mainControls.buttonBox._childrenList[14].tap()
@@ -140,14 +127,14 @@ export class Shortcuts extends Mod {
         });
 
         // Close interfaces
-        this.shortcutsHelper.bindVanilla('escape', () => {
+        this.shortcutsHelper.bindVanilla("escape", () => {
             if (this.wGame.gui.chat.active) {
                 this.wGame.gui.chat.deactivate();
             } else {
                 let winClosed = 0;
                 for (let i = this.wGame.gui.windowsContainer._childrenList.length - 1; i >= 0; i--) {
                     let win = this.wGame.gui.windowsContainer._childrenList[i];
-                    if (win.isVisible()) {
+                    if (win.isVisible() && win.id !== "recaptcha") {
                         win.close();
                         winClosed++;
                         break;
@@ -166,15 +153,16 @@ export class Shortcuts extends Mod {
             }
         });
         // Prevent using tab key
-        this.shortcutsHelper.bindVanilla('tab', (e: KeyboardEvent) => {
+        this.shortcutsHelper.bindVanilla("tab", (e: KeyboardEvent) => {
             e.preventDefault();
         });
     }
 
     public reset() {
         super.reset();
-        if (this.mover) this.mover.reset();
-        if (this.alignment) this.alignment.reset();
+        if (this.mover) {
+            this.mover.reset();
+        }
         this.shortcutsHelper.unBindAll();
     }
 }

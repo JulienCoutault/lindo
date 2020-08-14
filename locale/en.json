@@ -65,13 +65,9 @@
             "health-bar-shortcut": "Shortcuts for show/hide life bars",
             "jobsxp": "Activate the display of the job xp need for leveling",
             "estimator": "Estimating spell damage in battle",
-<<<<<<< HEAD
             "fightchronometer" : "Show combats chronometer",
-            "hide-mount": "Hide mounts during fights"
-=======
             "hide-mount": "Hide mounts during fights",
-            "fightchronometer" : "Show combats chronometer"
->>>>>>> master
+            "zaapsearchfilter" : "Show zaap search filter"
           },
           "groups": {
             "header": "Groups"
@@ -206,6 +202,9 @@
             }
           }
         },
+        "zaapsearchfilter":{
+          "placeholder": "Search a zaap"
+        },
         "party-info": {
           "header-lvl":"Show party's level",
           "header-pp":"Show party's prospecting",
@@ -237,7 +236,7 @@
           "header": "Miscellaneous",
           "end-turn": "End your turn / Ready (fight)",
           "open-chat": "Open the chat",
-          "alignment_scan":"Scan player alignments", 
+          "alignment_scan":"Scan player alignments",
           "active-open-menu": "Open menu when no window is open (ECHAP)",
           "open-menu": "Open the menu",
           "go_up": "Go to Upper Map",
