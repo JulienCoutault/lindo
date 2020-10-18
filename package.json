@@ -138,9 +138,8 @@
       "maintainer": "Prixe"
     },
     "deb": {
-      "description": "Lindo Client for Linux",
-      "icon": "build/icon.svg",
-      "desktop": "build/lindo.desktop"
+      "desktop": "build/lindo.desktop",
+      "icon": "build/icon.png"
     },
     "win": {
       "target": [
