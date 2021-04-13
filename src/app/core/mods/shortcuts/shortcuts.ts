@@ -156,6 +156,22 @@ export class Shortcuts extends Mod {
         this.shortcutsHelper.bindVanilla("tab", (e: KeyboardEvent) => {
             e.preventDefault();
         });
+
+        // up & down for chat history
+        let input = this.wGame.document.getElementsByClassName('inputChat')[0];
+        input.addEventListener("keydown", (e) => {
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.wGame.gui.chat.chatInput.sentMessageHistory.goBack();
+                this.wGame.gui.chat.chatInput.inputChat.setValue(this.wGame.gui.chat.chatInput.sentMessageHistory.getCurrentEntry()['message']);
+                return false;
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.wGame.gui.chat.chatInput.sentMessageHistory.goForward();
+                this.wGame.gui.chat.chatInput.inputChat.setValue(this.wGame.gui.chat.chatInput.sentMessageHistory.getCurrentEntry()['message']);
+                return false;
+            }
+        }, false);
     }
 
     public reset() {
