@@ -14,5 +14,6 @@ export { PartyInfo } from "./party-info/party-info";
 export { PartyMember } from "./party-info/party-member-on-map";
 export { RapidExchange } from "./rapid-exchange/rapid-exchange";
 export { Shortcuts } from "../mods/shortcuts/shortcuts";
+export { ResumeShop } from "./resumeShop/resumeShop";
 export { ShowResources } from "./show-resources/show-resources";
 export { ZaapSearchFilter } from "./zaap-search-filter/zaap-search-filter";
