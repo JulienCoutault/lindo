@@ -20,7 +20,7 @@ export interface SettingsInterface {
             sound_focus: boolean;
             early: boolean;
             audio_muted: boolean;
-        }
+        },
         shortcuts: {
             no_emu: {
                 new_tab: string;
@@ -61,7 +61,7 @@ export interface SettingsInterface {
                 bestiary: string;
                 title: string;
                 achievement: string;
-                almanax: string;
+                dailyQuest: string;
                 spouse: string;
                 shop: string;
                 goultine: string;
@@ -88,6 +88,10 @@ export interface SettingsInterface {
                 party_info_pp: boolean;
                 party_info_lvl: boolean;
                 zaapsearchfilter: boolean;
+                harvest_indicator: boolean;
+                show_resources: boolean;
+                show_resources_shortcut: string;
+                party_member_on_map: boolean;
             },
             auto_group: {
                 active: boolean;

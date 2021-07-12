@@ -5,41 +5,48 @@
     <meta charset="UTF-8">
     <title>Lindo</title>
     <base href="./index.html">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; font-src * data: 'unsafe-inline' 'unsafe-eval';">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
-        let isElectron = false;
-        if (window && window.process && window.process.type) {
-            isElectron = true;
-        }
 
-        const electron = isElectron ? require('electron') : undefined;
-        const electronSettings = isElectron ? require('electron-settings') : undefined;
-        const cryptoLib = isElectron ? require('crypto') : undefined;
-        const httpsLib = isElectron ? require('https') : undefined;
-        const fsExtraLib = isElectron ? require('fs-extra') : undefined;
-        const fsLib = isElectron ? require('fs') : undefined;
-        const osLib = isElectron ? require('os') : undefined;
-        const pathLib = isElectron ? require('path') : undefined;
-        const axiosLib = isElectron ? require('axios') : undefined;
-        const httpAdapterLib = isElectron ? require('axios/lib/adapters/http') : undefined;
-        const nodeProcess = window.process;
-        const {
-            Application
-        } = isElectron ? require('electron').remote.require('./application') : {Application: undefined};
-        const {
-            Settings
-        } = isElectron ? require('electron').remote.require('./settings/settings') : {Settings: undefined};
-        const LoggerLib = isElectron ? require('electron').remote.require('./core/logger/logger-app').Logger : undefined;
-        window.FileLoggerLib = isElectron ? require('electron').remote.require('./core/logger/file-logger-app').logger : undefined;
-        window.platform = electron.remote.process.platform;
+        /** Electron */
+        const electron = require('electron');
+        const electronSettings = require('electron-settings');
+        const electronRemote = require('@electron/remote');
+        const electronRemoteApp = require('@electron/remote').app;
+        const electronRemoteProcess = require('@electron/remote').process;
+
+        window.electronSettings = electronSettings;
+        window.electronRemote = electronRemote;
+        window.electronRemoteApp = electronRemoteApp;
+        window.electronRemoteProcess = electronRemoteProcess;
+
+        /** Others */
+        const cryptoLib = require('crypto');
+        const fsLib = require('fs');
+        const osLib = require('os');
+        const pathLib = require('path');
+        const httpAdapterLib = require('axios/lib/adapters/http');
+
+        const Application = require('@electron/remote').require('./application').Application;
+        const Settings = require('@electron/remote').require('./settings/settings').Settings;
+
+        let LoggerGame = require('@electron/remote').require('./core/logger/logger-game').Logger;
+        let LoggerLindo = require('@electron/remote').require('./core/logger/logger-lindo').Logger;
+
+        window.platform = require('@electron/remote').process.platform;
+
+        /** Just for distant code compatiblity */
+        window.FileLoggerLib = LoggerGame;
+        window.Logger = LoggerLindo;
     </script>
 </head>
 
-<body class="dt-no-emu-default">
+<body>
 
-<component-app></component-app>
+<app-component></app-component>
 
 <div class="loader-container" id="loading">
     <div class="loader-egg"></div>

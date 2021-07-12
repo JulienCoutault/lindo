@@ -21,7 +21,8 @@
       "tax-collector": "Un percepteur est attaqué !",
       "kolizeum": "Un Kolizéum a été trouvé !",
       "party-invitation": "{{character}} vous invite à rejoindre son groupe.",
-      "aggression": "Vous avez été aggressé !"
+      "aggression": "Vous avez été aggressé !",
+      "sale-message": "Banque"
     },
     "window": {
       "changelog": {
@@ -35,11 +36,20 @@
         "password-bad": "Le mot de passe est incorrect"
       },
       "update-dofus": {
-        "title": "Mise à jour de Dofus Touch",
+        "title": "Mise à jour de Lindo",
+        "step0": "Préparation de la mise à jours..",
+        "step1": "Étape 1 : Téléchargement des fichiers de Dofus",
+        "step2": "Étape 2 : Téléchargement des patch Lindo",
+        "step3": "Étape 3 : Résolution des versions",
+        "step4": "Étape 4 : Application des patchs",
+        "step5": "Étape 5 : Écriture des fichiers modifiés",
+        "step6": "Étape 6 : Suppression des anciens fichiers",
+        "step7": "Étape 7 : Finalisation",
+        "step8": "Étape 8 : Lancement de Lindo..",
         "information": {
           "search": "Recherche de mises à jour...",
-          "downloading": "Téléchargement en cours...",
-          "error": "Impossible de télécharger la mise à jour ! Veuillez réessayer ultérieurement"
+          "error": "Impossible d'effectuer la mise à jour ! Veuillez réessayer ultérieurement",
+          "retry": "Réessayer"
         }
       },
       "options": {
@@ -67,7 +77,11 @@
             "jobsxp": "Activer l'affichage de l'xp a obtenir pour monter de niveau (métier)",
             "hide-mount": "Cacher les montures pendant les combats",
             "fightchronometer": "Afficher le chronomètre de combats",
-            "zaapsearchfilter" : "Afficher le filtre de recherche de zaap"
+            "zaapsearchfilter" : "Afficher le filtre de recherche de zaap",
+            "show-resources" : "Affiches les ressources de la carte",
+            "show-resources-shortcut" : "Raccourcis pour l'affichage des ressources",
+            "harvest-indicator" : "Barres de temps sous les récoltes",
+            "party-member-on-map" : "Ajoute un indicateur pour savoir si les membres d'un groupe sont sur la même carte"
           },
           "groups": {
             "header": "Groupe"
@@ -77,7 +91,7 @@
           }
         },
         "about": {
-          "title": "A propos de",
+          "title": "À propos",
           "links": {
             "website": "Site web",
             "changelog": "Notes de version"
@@ -203,7 +217,8 @@
         },
         "zaapsearchfilter":{
           "placeholder": "Rechercher un zaap",
-          "placeholderZaapi": "Rechercher un zaapi"
+          "placeholderZaapi": "Rechercher un zaapi",
+          "placeholderPrisme": "Rechercher un prisme"
         },
         "party-info": {
           "header-lvl": "Afficher le niveau du groupe",
@@ -264,7 +279,7 @@
           "bestiary": "Bestiare",
           "title": "Titres et Ornements",
           "achievement": "Succès",
-          "almanax": "Almanax",
+          "dailyQuest": "Quêtes Journalières",
           "spouse": "Conjoint",
           "shop": "Marchand"
         },
@@ -293,7 +308,8 @@
         "tax-collector": "Quand un percepteur est attaqué",
         "kolizeum": "Quand un combat de kolizéum est trouvé",
         "party-invitation": "Quand un joueur vous invite dans un groupe",
-        "aggression": "Quand un joueur vous aggresse"
+        "aggression": "Quand un joueur vous aggresse",
+        "sale-message": "Quand un item est vendu"
       },
       "save": "Valider",
       "prompt": {

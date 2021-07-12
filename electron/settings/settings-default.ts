@@ -38,9 +38,7 @@ export const SettingsDefault: SettingsInterface = {
                     "f5",
                     "f6",
                     "f7",
-                    "f8",
-                    "f9",
-                    "f10"
+                    "f8"
                 ]
             },
             diver: {
@@ -136,7 +134,7 @@ export const SettingsDefault: SettingsInterface = {
                 bestiary: "b",
                 title: "t",
                 achievement: "u",
-                almanax: "x",
+                dailyQuest: "x",
                 spouse: "l",
                 shop: "v",
                 goultine: "r"
@@ -162,7 +160,11 @@ export const SettingsDefault: SettingsInterface = {
                 hidden_mount: false,
                 party_info_pp: false,
                 party_info_lvl: false,
-                zaapsearchfilter: true
+                zaapsearchfilter: true,
+                harvest_indicator: true,
+                show_resources: false,
+                show_resources_shortcut: '',
+                party_member_on_map: true
             },
             auto_group: {
                 active: false,

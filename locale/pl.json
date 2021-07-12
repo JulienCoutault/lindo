@@ -21,7 +21,8 @@
       "tax-collector": "Twój Perceptor został zaatakowany!",
       "kolizeum": "Koloseum zostało znalezione!",
       "party-invitation": "Dostałeś zaproszenie do dołączenia do grupy {{character}} .",
-      "aggression": "Zostałeś zaatakowany!"
+      "aggression": "Zostałeś zaatakowany!",
+      "sale-message": "Bank"
     },
     "window": {
       "changelog": {
@@ -35,11 +36,20 @@
         "password-bad": "Podane hasło jest nieprawidłowe"
       },
       "update-dofus": {
-        "title": "Aktualizacja Dofus Touch",
+        "title": "Aktualizacja Lindo",
+        "step0": "Przygotowanie do aktualizacji..",
+        "step1": "Krok 1 : Pobieranie plików Dofus",
+        "step2": "Krok 2 : Pobieranie łatki Lindo",
+        "step3": "Krok 3 : Rozdzielczość wersji",
+        "step4": "Krok 4 : Nakładanie plastrów",
+        "step5": "Krok 5 : Pisanie zmodyfikowanych plików",
+        "step6": "Krok 6 : Usuń stare pliki",
+        "step7": "Krok 7 : Finalizacja",
+        "step8": "Krok 8 : Uruchomienie Lindo..",
         "information": {
           "search": "Szukanie aktualizacji...",
-          "downloading": "Pobieranie...",
-          "error": "Nie można pobrać aktualizacji! Proszę spróbować później"
+          "error": "Nie można pobrać aktualizacji! Proszę spróbować później",
+          "retry": "Spróbuj ponownie"
         }
       },
       "options": {
@@ -67,7 +77,11 @@
             "estimator": "Włącz przewidywanie obrażeń podczas walki",
             "hide-mount": "Nie pokazuj wierzchowców podczas walki",
             "fightchronometer" : "Pokaż czas trwania walki",
-            "zaapsearchfilter" : "Pokaż filtr wyszukiwania zaap'ów"
+            "zaapsearchfilter" : "Pokaż filtr wyszukiwania zaap'ów",
+            "show-resources" : "Pokaż zasoby mapy",
+            "show-resources-shortcut" : "Skrót do pokazywania/ukrywania zasobów mapy",
+            "harvest-indicator" : "Aktywuj wyświetlanie pozostałego czasu poniżej zasobów",
+            "party-member-on-map" : "Dodaj wskaźnik, aby wiedzieć, czy członkowie grupy znajdują się na tej samej mapie"
           },
           "groups": {
             "header": "Grupy"
@@ -85,7 +99,7 @@
           "text0": "Lindo jest open-sourcowym oprogramowaiem, które pozwala ci na grę w DOFUS Touch z poziomu swojego komputera.",
           "text1": "W przeciwieństwie do emulatorów Androida, kod źródłowy jest bezpośrednio interpretowany przez Twój komputer, co sprawia, że granie w DOFUS Touch jest szybsze oraz wykorzystuje pełen potencjał Twojego komputera!",
           "text2": "Oprogramowanie oryginalnie znane jako DOFUS Touch No-Emu, zostało stworzone przez Daniela i Thomas'a, którzy byli zmuszeni zamknąć projekt przez awersję ze strony Ankamy."
-        
+
         }
       },
       "shortcuts": {
@@ -205,7 +219,8 @@
         },
         "zaapsearchfilter":{
           "placeholder": "Szukaj zaap'a",
-           "placeholderZaapi": "Szukaj zaapi'a"
+           "placeholderZaapi": "Szukaj zaapi'a",
+           "placeholderPrisme": "Szukaj prisme"
         },
         "party-info": {
           "header-lvl":"Pokaż poziom grupy",
@@ -265,7 +280,7 @@
           "bestiary": "Bestiariusz",
           "title": "Tytuły i ornamenty",
           "achievement": "Osiągnięcia",
-          "almanax": "Almanax",
+          "dailyQuest": "Codzienne Zadania",
           "spouse": "Spouse(druga połówka)",
           "shop": "Własny sklep"
         },
@@ -294,7 +309,8 @@
         "tax-collector": "Perceptor będzie zaatakowany",
         "kolizeum": "Walka w Koloseum została znaleziona",
         "party-invitation": "Ktoś wysłał Ci zaproszenie do grupy",
-        "aggression": "Zostaniesz zaatakowany"
+        "aggression": "Zostaniesz zaatakowany",
+        "sale-message": "Gdy przedmiot jest sprzedawany"
       },
       "reset": "Resetuj",
       "save": "Zatwierdź",
